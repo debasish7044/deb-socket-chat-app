@@ -33,7 +33,6 @@ io.on('connection', (socket) => {
     }
 
     socket.join(user.room);
-
     //sending welcome message to client
     socket.emit(
       'message',

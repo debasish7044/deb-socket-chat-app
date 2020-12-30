@@ -13,15 +13,13 @@ const addUser = ({ id, username, room }) => {
   }
   //creating username existing function
   const existingUser = users.find(
-    (user) => user.room === room && user.username === username
+    (user) => user.room == room && user.username == username
   );
   if (existingUser) {
     return {
       error: 'username already in this room',
     };
   }
-  username = username.trim().charAt().toUpperCase() + username.slice(1);
-  room = room.trim().charAt().toUpperCase() + room.slice(1);
 
   // returning user
   const user = { id, username, room };
